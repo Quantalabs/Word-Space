@@ -1,2 +1,2 @@
 # Word-Space
-A word-processer
+A word-processer like Google Docs
