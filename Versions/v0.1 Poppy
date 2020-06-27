@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Space</title>
+    <style>
+    body{
+      background-image: url("https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200416164101-3-underscored-creative-writing-lead.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+      #header{
+        width: 45vw;
+        height: 35px;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+      margin-top: 20vh;
+        font-size: 30px;
+        text-align: center;
+      }
+    #doc {
+      width: 45vw;
+      height: 33vh;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+    }
+    #font{
+      float: left;
+    }
+    #style{
+      height: 20px;
+      margin-bottom: auto;
+      margin-top: auto;
+      width: 80vh;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+      
+    }
+    #styleButton{
+      float: right, 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="header" placeholder="Title"></textarea>
+    <textarea  id="doc" placeholder="Write something great..."></textarea>
+    <textarea id="style" placeholder="styleProperty.value"></textarea>
+    <button type="button" id="styleButton">select</button>
+    <div class="d">
+
+    </div>
+  </body>
+  <script>
+    var a = document.getElementById("style");
+    var styleFunc = function () {
+      var style = document.getElementById("style").value;
+      var doc = document.getElementById("doc");
+
+      var a = style.split(".");
+      console.log(a[0])
+      doc.style[a[0]] = [a[1]];
+    };
+    a.addEventListener("change",styleFunc);
+  </script>
+</html>
