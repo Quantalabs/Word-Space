@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Space</title>
+    <style>
+    body{
+      background-image: url("https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200416164101-3-underscored-creative-writing-lead.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+      .header{
+        width: 45vw;
+        height: 35px;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+      margin-top: 20vh;
+        font-size: 30px;
+        text-align: center;
+      }
+    .doc {
+      width: 45vw;
+      display: inline-block;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+    }
+		#doc{
+			width: 45vw;
+      display: inline-block;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+		}
+    #font{
+      float: left;
+    }
+    #style{
+      height: 20px;
+      margin-bottom: auto
+      margin-top: auto;
+      width: 45vw;
+      resize: none;
+      margin-left: 27.5vw;
+      font-family: Poppins;
+			text-align: center;
+    }
+
+    </style>
+  </head>
+  <body>
+    <textarea class="header" placeholder="Title"></textarea>
+    <textarea  id="doc" placeholder="Write something great..."></textarea>
+    <textarea id="style" placeholder="styleProperty.value"></textarea>
+		    <button type="button" id="styleButton">select</button>
+		<button id="header-button">Click Me (yes, buttons have feelings to. so you betta click me) to (or is it too?) ADD (it should be in CAPS right? RIGHT?) A (should that be in CAPS to (or too?) and you can put parenthisis inside parenthisis right?) Header</button>
+  </body>
+  <script>
+  var style = function () {
+    var a = document.getElementById("styleButton") 
+    var styleFunc = function () {
+      var style = document.getElementById("style").value 
+      var doc = document.getElementById("doc") 
+
+      var a = style.split(".") 
+      console.log(a[0])
+      doc.style[a[0]] = [a[1]] 
+    } 
+    a.addEventListener("click",styleFunc) 
+  };
+  style()
+	var aletterornumber = document.getElementById("header-button")
+	var dodatthing = function () {
+	document.body.innerHTML += "<textarea class=\"header\" placeholder=\"Your section title\"></textarea><br><textarea class=\"doc\" placeholder=\"Continue your storie in 5,4,3,2,1, NOW!!!\"></textarea>"
+	}
+	aletterornumber.addEventListener("click",dodatthing)
+  </script>
+</html>
